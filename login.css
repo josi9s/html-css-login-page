@@ -1,0 +1,131 @@
+body{
+  background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(56,8,177,1) 74%);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+#login-box{
+  text-align: center;
+  width: 100%;
+}
+
+#login-title{
+  font-weight:200;
+  font-size: 3em;
+  color: white;
+}
+
+#input-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#user, #password{
+  padding-left: 46px;
+  padding-top: 6px;
+  font-size: 25px;
+  width: 360px;
+  height: 50px;
+  margin-bottom: 35px;
+  color: white;
+  border: 1px solid rgba(255,255,255, 0.7);
+  background-color: transparent;
+}
+
+#user::placeholder, #password::placeholder{
+  line-height:normal;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 20px;
+  background-size: 20px 20px;
+}
+
+#user{
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="20" height="20"><path d="M15 0.333344C16.945 0.333344 18.8102 1.10596 20.1855 2.48123C21.5608 3.85649 22.3334 5.72176 22.3334 7.66668C22.3334 9.6116 21.5608 11.4769 20.1855 12.8521C18.8102 14.2274 16.945 15 15 15C13.0551 15 11.1899 14.2274 9.81459 12.8521C8.43932 11.4769 7.66671 9.6116 7.66671 7.66668C7.66671 5.72176 8.43932 3.85649 9.81459 2.48123C11.1899 1.10596 13.0551 0.333344 15 0.333344ZM15 18.6667C23.1034 18.6667 29.6667 21.9483 29.6667 26V29.6667H0.333374V26C0.333374 21.9483 6.89671 18.6667 15 18.6667Z" fill="white"/></svg>') no-repeat 15px center;
+}
+
+#password{
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 32" width="20" height="20"><path fill="white" fill-rule="evenodd" clip-rule="evenodd" d="M4.99996 13.6636V10.6667C4.99996 8.05596 5.94817 5.55217 7.636 3.7061C9.32383 1.86004 11.613 0.822937 14 0.822937C16.3869 0.822937 18.6761 1.86004 20.3639 3.7061C22.0517 5.55217 23 8.05596 23 10.6667V13.6636C24.4866 13.7846 25.4533 14.0909 26.1613 14.8652C27.3333 16.1456 27.3333 18.2092 27.3333 22.3334C27.3333 26.4575 27.3333 28.5211 26.1613 29.8015C24.9906 31.0834 23.104 31.0834 19.3333 31.0834H8.66663C4.89596 31.0834 3.00929 31.0834 1.83863 29.8015C0.666626 28.5211 0.666626 26.4575 0.666626 22.3334C0.666626 18.2092 0.666626 16.1456 1.83863 14.8652C2.54529 14.0909 3.51329 13.7846 4.99996 13.6636ZM6.99996 10.6667C6.99996 8.63612 7.73746 6.68873 9.05021 5.2529C10.363 3.81708 12.1434 3.01044 14 3.01044C15.8565 3.01044 17.637 3.81708 18.9497 5.2529C20.2625 6.68873 21 8.63612 21 10.6667V13.5892C20.4897 13.5843 19.9342 13.5824 19.3333 13.5834H8.66663C8.06485 13.5824 7.50929 13.5843 6.99996 13.5892V10.6667Z"/></svg>') no-repeat 15px center;;
+}
+
+#checkbox-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+#checkbox{
+  appearance: none;
+  background-color: rgba(255,255,255, 0.3);
+  width: 13px;
+  height: 13px;
+  margin: 0;
+  line-height: normal;
+}
+
+#checkbox:hover{
+  background-color: rgba(255,255,255, 0.4);
+}
+
+#checkbox:checked {
+  background-color: rgba(255,255,255, 0.4);
+  position: relative;
+}
+
+#checkbox:checked::after {
+  content: "✔";
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#submit{
+  margin-top: 30px;
+  width: 430px;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+}
+
+#submit:hover{
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#forgot{
+  color:white;
+  margin-top: 1px;
+}
+
+@media (max-width: 438px){
+  #user, 
+  #password {
+    width: 75%;
+  }
+
+  #submit {
+    width: 93%;
+  }
+
+  #checkbox-container{
+    gap: 70px;
+  }
+
+  #remind-me, #forgot {
+    font-size: 13px;
+    line-height: 13px;
+  }
+
+}
